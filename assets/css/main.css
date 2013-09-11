@@ -1,0 +1,10 @@
+#main{
+	position: relative;
+	left: 50%;
+	margin-left: -400px;
+	width: 800px;
+}
+
+.article-wrap{
+	width: 500px;
+}
