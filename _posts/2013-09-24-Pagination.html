@@ -1,0 +1,12 @@
+---
+layout: post
+title Pagination
+---
+
+Though the site is near complete, there’s still a few things left to do. One of them is paginating the home page’s list of blog posts. If you’ve added more than ten blog items to the _posts directory, you’ll notice that the front page will only display the top ten (or however many posts you set your loop to display).
+
+To fix this, we need to use the final global variable in Jekyll– paginator.
+
+The paginator will only work on your home page (the index.html file), so there’s no way to use the paginator to build multi-page posts without a plugin. If you open your _config.yml file, you’ll see the paginate: 10 value. This tells the paginator to break pages at ten posts. You can change this value if you wish, or even lower to one or two for testing if you do not want to spend time adding more dummy posts. If you change the configuration file, you will also need to stop and restart the Jekyll server for the _config.yml file to be reloaded. This can be done by pressing Control+C on the command line.
+
+The paginator uses a different style of post loop and will require a small change in your index.html page. Open index.html and look at your loop. Right now, we are looping through site.posts, which is a collection of all your blog posts. The paginator has its own collection that automatically truncates to N posts, with N being the value in your _config.yml file. The only change you’ll have to make is changing site.posts to paginator.posts and removing the limit: 10. The reason we don’t need this limit anymore is because the paginator automatically limits the number of posts for us to the value in the configuration file.

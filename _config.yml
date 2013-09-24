@@ -1,5 +1,18 @@
-title:            Site Title
-tagline:          A short tagline
-description:      Describe your website.
-#Comment out url when working locally to resolve base urls correctly
-url:              http://localhost:4000
+title: "testfff"
+
+name: 测试站点
+
+description: ""
+
+paginate: 2
+
+test: laia
+
+url:  http://localhost:4000
+
+markdown: rdiscount
+
+permalink: pretty
+
+pygments: false
+
